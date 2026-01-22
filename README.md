@@ -1,24 +1,34 @@
-# Simple JS Calculator
+# Simple JS Calculator (Browser Version)
 
-A lightweight command-line calculator built with JavaScript. This project demonstrates basic arithmetic operations and logic handling in a Node.js environment.
+A lightweight calculator built with HTML, CSS, and vanilla JavaScript.  
+This project demonstrates basic arithmetic operations and DOM manipulation in a web browser.
 
 ## 🚀 Features
 This calculator supports the following mathematical operations:
-* **Addition** (`sum`)
-* **Subtraction** (`subtract`)
-* **Multiplication** (`multiply`)
-* **Division** (`divide`) - *Includes error handling for division by zero.*
-* **Modulus** (`modulus`) - *Finds the remainder.*
-* **Power** (`power`) - *Calculates exponents.*
-* **Square Root** (`squareRoot`)
+
+* **Addition** (`+`)
+* **Subtraction** (`-`)
+* **Multiplication** (`×`)
+* **Division** (`÷`)
+* **Clear** (`C`) - *Clears the entire display.*
+* **Delete** (`DEL`) - *Deletes the last character.*
+* **Decimal Numbers** (`.`) - *Supports floating-point numbers.*
+
+### ✅ Bonus Features
+* Simple and responsive grid layout
+* Error handling for invalid expressions (e.g., `22÷0`)
 
 ## 🛠️ Requirements
-To run this project, you need to have [Node.js](https://nodejs.org/) installed on your machine.
+All you need is a modern web browser. No backend or Node.js required.
 
 ## 💻 How to Run
-1. Clone this repository or download the `app.js` file.
-2. Open your terminal or command prompt.
-3. Navigate to the folder containing the file.
-4. Run the following command:
-   ```bash
-   node app.js
+1. Clone this repository or download the files.
+2. Open `index.html` in your browser.
+3. Start clicking buttons to perform calculations.
+
+## 📸 Screenshots
+*(Optional: add a screenshot of your calculator here)*
+
+## 👨‍💻 Author
+Sam
+

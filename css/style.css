@@ -1,0 +1,174 @@
+/* ============================================
+   MODERN CALCULATOR - STYLESHEET
+   Comprehensive styling for calculator UI
+   ============================================ */
+
+/* ============================================
+   GLOBAL STYLES - Universal element styles
+   ============================================ */
+* {
+    /* Remove default margins from all elements */
+    margin: 0;
+    /* Remove default padding from all elements */
+    padding: 0;
+    /* Ensure padding and borders are included in width/height calculations */
+    box-sizing: border-box;
+}
+
+/* ============================================
+BODY STYLES - Main page layout
+   ============================================ */
+body {
+    /* Use flexbox for centering the calculator */
+    display: flex;
+    /* Center calculator horizontally */
+    justify-content: center;
+    /* Center calculator vertically */
+    align-items: center;
+    /* Make body take up full viewport height */
+    min-height: 100vh;
+    /* Apply a purple gradient background from top-left to bottom-right */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    /* Use modern sans-serif font */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ============================================
+   CALCULATOR CONTAINER - Main calculator box
+   ============================================ */
+.calculator {
+    /* Dark gray background for calculator */
+    background: #2d2d2d;
+    /* Rounded corners for modern look */
+    border-radius: 20px;
+    /* Internal spacing around calculator */
+    padding: 20px;
+    /* Shadow effect for depth */
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    /* Fixed width for calculator */
+    width: 320px;
+}
+
+/* ============================================
+   DISPLAY SECTION - Container for the display
+   ============================================ */
+.display {
+    /* Bottom margin to separate from buttons */
+    margin-bottom: 20px;
+}
+
+/* ============================================
+   DISPLAY INPUT - Result/input display area
+   ============================================ */
+#display {
+    /* Take up full width of container */
+    width: 100%;
+    /* Internal padding for text spacing */
+    padding: 20px;
+    /* Large, readable font size for numbers */
+    font-size: 2.5rem;
+    /* Dark background to show text clearly */
+    background: #1a1a1a;
+    /* Light gray text color for contrast */
+    color: #f1f1f1;
+    /* Remove default input border */
+    border: none;
+    /* Rounded corners to match calculator */
+    border-radius: 10px;
+    /* Align numbers to the right (standard for calculators) */
+    text-align: right;
+    /* Make text bold for better visibility */
+    font-weight: bold;
+}
+
+/* ============================================
+   BUTTONS CONTAINER - Grid layout for buttons
+   ============================================ */
+.buttons {
+    /* Use CSS grid for button layout */
+    display: grid;
+    /* Create 4 equal columns for buttons */
+    grid-template-columns: repeat(4, 1fr);
+    /* Space between buttons */
+    gap: 10px;
+}
+
+/* ============================================
+   BUTTON BASE STYLES - Common button styles
+   ============================================ */
+.btn {
+    /* Internal padding for button size */
+    padding: 20px;
+    /* Medium font size for numbers and operators */
+    font-size: 1.2rem;
+    /* Remove default button border */
+    border: none;
+    /* Rounded corners matching calculator theme */
+    border-radius: 10px;
+    /* Change cursor to pointer on hover */
+    cursor: pointer;
+    /* Bold text for better visibility */
+    font-weight: bold;
+    /* Smooth animation for button interactions */
+    transition: all 0.2s ease;
+}
+
+/* ============================================
+   BUTTON HOVER STATE - Interaction feedback
+   ============================================ */
+.btn:hover {
+    /* Lift button up slightly on hover */
+    transform: translateY(-2px);
+    /* Add subtle shadow when hovering */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* ============================================
+   BUTTON ACTIVE STATE - Click feedback
+   ============================================ */
+.btn:active {
+    /* Return button to normal position when clicked */
+    transform: translateY(0);
+}
+
+/* ============================================
+   NUMBER & DECIMAL BUTTON STYLES - Input buttons
+   ============================================ */
+.number, .decimal {
+    /* Medium dark gray background */
+    background: #404040;
+    /* White text for good contrast */
+    color: #fff;
+}
+
+/* ============================================
+   OPERATOR BUTTON STYLES - Math operation buttons
+   ============================================ */
+.operator {
+    /* Purple/blue background matching gradient theme */
+    background: #667eea;
+    /* White text for good contrast */
+    color: #fff;
+}
+
+/* ============================================
+   CLEAR & DELETE BUTTON STYLES - Action buttons
+   ============================================ */
+.clear, .delete {
+    /* Red background to indicate destructive action */
+    background: #ff6b6b;
+    /* White text for good contrast */
+    color: #fff;
+}
+
+/* ============================================
+   EQUALS BUTTON STYLES - Result button
+   ============================================ */
+.equals {
+    /* Bright green background to highlight result button */
+    background: #00ff88;
+    /* Black text for contrast on bright background */
+    color: #000;
+    /* Span 2 columns to make equals button larger */
+    grid-column: span 2;
+}

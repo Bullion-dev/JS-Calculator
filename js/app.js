@@ -1,38 +1,51 @@
-//js-calculator
-function sum(num1, num2) {
-    return num1 + num2;
+// ============================================
+// JS-CALCULATOR APPLICATION
+// A simple calculator application with basic arithmetic operations
+// ============================================
+
+// Get reference to the display input element from the HTML document
+const display = document.getElementById('display');
+
+/**
+ * Appends a value (number or operator) to the display
+ * @param {string} value - The value to append (e.g., '1', '+', '.')
+ */
+function appendToDisplay(value) {
+    // Add the value to the end of the current display value
+    display.value += value;
 }
-console.log(sum(5, 10));
 
-function subtract(num1, num2) {
-    return num1 - num2;
+/**
+ * Clears the entire display
+ * Resets the display to an empty string
+ */
+function clearDisplay() {
+    // Reset the display value to empty
+    display.value = '';
 }
-console.log(subtract(10, 5));
 
-function multiply(num1, num2) {
-    return num1 * num2;
-}   
-console.log(multiply(5, 10));
+/**
+ * Deletes the last character from the display
+ * Used for correcting input errors
+ */
+function deleteLast() {
+    // Remove the last character by slicing from start to one position before the end
+    display.value = display.value.slice(0, -1);
+}
 
-function divide(num1, num2) {
-    if (num2 === 0) {
-        return "Error: Division by zero";
+/**
+ * Calculates the mathematical expression in the display
+ * Uses eval() to evaluate the expression and displays the result
+ * Handles errors gracefully by displaying 'Error' message
+ */
+function calculate() {
+    // Try to evaluate the expression in the display
+    try {
+        // Evaluate the mathematical expression and update display with result
+        display.value = eval(display.value);
+    } catch (error) {
+        // If there's an error (invalid expression), display 'Error' message
+        display.value = 'Error';
     }
-    return num1 / num2;
 }
-console.log(divide(10, 5));
 
-function modulus(num1, num2) {
-    return num1 % num2;
-}   
-console.log(modulus(10, 3));
-
-function power(num1, num2) {
-    return Math.pow(num1, num2);
-}
-console.log(power(2, 3));
-
-function squareRoot(num) {
-    return Math.sqrt(num);
-}
-console.log(squareRoot(16));
